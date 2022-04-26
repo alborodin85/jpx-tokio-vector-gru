@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 import jpx_tokyo_market_prediction
-'''Для работы АПИ необходимо скопировать в папку example_test_files в этом проекте файлы из папки example_test_files, предоставляемые организаторами.'''
+'''Для работы АПИ необходимо скопировать в папку example_test_files, которая в этом проекте, все файлы из папки example_test_files, предоставляемые организаторами.'''
 
 pd.set_option('display.max_columns', 10)
 pd.set_option('display.max_rows', 20)
