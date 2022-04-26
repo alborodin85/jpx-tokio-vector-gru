@@ -20,7 +20,11 @@ for (prices, options, financials, trades, secondary_prices, sample_prediction) i
     print(trades)
     print(secondary_prices)
     print(sample_prediction)
-    sample_prediction['Rank'] = 0
+
+    # тестовые данные
+    sample_prediction['Rank'] = [item for item in range(1999, -1, -1)]
+    # без этой строки ответ может быть не принят
+    sample_prediction['Rank'] = [int(item) for item in sample_prediction['Rank']]
     print(sample_prediction)
 
     env.predict(sample_prediction)
