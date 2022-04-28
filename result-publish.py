@@ -43,7 +43,9 @@ for (prices, options, financials, trades, secondaryPrices, samplePrediction) in 
     inputDataDf = preparedData.iloc[-lookBack:]
     inputData = inputDataDf.values
     inputData = inputData.reshape(1, inputData.shape[0], inputData.shape[1])
+
     lastRow = model.predict(inputData)
+
     lastRow = lastRow[0]
     lastRow = pd.Series(lastRow)
     previousRow = structuredData.iloc[-1]
@@ -52,7 +54,7 @@ for (prices, options, financials, trades, secondaryPrices, samplePrediction) in 
     delta = (restoredRow - previousRow) / previousRow
     deltaSorted = delta.sort_values(ascending=False)
 
-    deltas = pd.DataFrame(delta, columns=['Delta'])
+    deltas = pd.DataFrame(delta)
     deltas['Rank'] = pd.Series()
 
     for rankValue in range(deltaSorted.index.size):

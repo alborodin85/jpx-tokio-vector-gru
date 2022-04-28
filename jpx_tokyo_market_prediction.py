@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 class make_env:
     pricesPath = 'example_test_files/stock_prices.csv'
     optionsPath = 'example_test_files/options.csv'
