@@ -9,11 +9,8 @@ pd.set_option('display.width', 200)
 
 import os
 
-print()
-exit()
-
 df = pd.DataFrame({'Test1': [1, 2, 3, 4, 5], 'Test2': [6, 8, 10, 12, 14]})
-print(df)
+df.plot()
 
 # print(f'mean of [1, 2, 3, 4]: {statistics.mean([1, 2, 3, 4]):.3f}')
 # print(f'mean of [6, 8, 10, 12]: {statistics.mean([6, 8, 10, 12]):.3f}')
